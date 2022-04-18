@@ -21,11 +21,13 @@ Subdirectory `compute_pi`
   algorithm.  The actual computation is done by approximating the
   integral of 4/(1+x^2) on the interval [0,1] with the midpoint rule
   with 400,000,000 subintervals.
+  
+  **************************
   این برنامه با استفاده از یک سریال تقریبی از پی را محاسبه می کند
    الگوریتم محاسبه واقعی با تقریب انجام می شود
    انتگرال 4/(1+x^2) در بازه [0,1] با قانون نقطه میانی
    با 400000000 زیر بازه.
-
+************************************
 * `pi_omp.cc`
 
   Same as above except OpenMP is used to provide multithreading if
@@ -35,6 +37,8 @@ Subdirectory `compute_pi`
   `OMP_NUM_THREADS`.  For example `OMP_NUM_THREADS=1 ./pi_omp` will
   force the program to use a single thread regardless of of the
   hardware.
+  
+  **************************
   مانند بالا به جز OpenMP برای ارائه multithreading if استفاده می شود
    توسط سخت افزار پشتیبانی می شود. به طور خاص، یک موضوع موازی است
    برای هر پردازنده یا هسته پردازشگر روی دستگاه ایجاد شده است. این
@@ -42,7 +46,7 @@ Subdirectory `compute_pi`
    «OMP_NUM_THREADS». برای مثال «OMP_NUM_THREADS=1 ./pi_omp» خواهد بود
    برنامه را مجبور به استفاده از یک رشته بدون توجه به
    سخت افزار
-
+*************************
 * `pi_mpi.cc`
 
   This version uses MPI and is suitable for distributed memory
@@ -59,9 +63,12 @@ Subdirectory `compute_pi`
   where `<file>` is a file containing the names of the individual machines
   that comprise the cluster.  If the cluster has the resource manager SLURM
   then try
+  
+  ******************************
   که در آن "<file>" فایلی است که نام هر ماشینی را شامل می شود
    که خوشه را تشکیل می دهند. اگر خوشه دارای مدیر منبع SLURM باشد
    پس تلاش کن
+   ****************************
   ```shell
   salloc -Q -n <N> mpiexec ./pi_mpi
   ```
